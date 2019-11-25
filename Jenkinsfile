@@ -33,7 +33,7 @@ pipeline {
             when {
                 branch 'master'
             }
-            steps {cd
+            steps {
                 echo 'NO ELO TO PRODUCTION BEJBE'
             }
          }
