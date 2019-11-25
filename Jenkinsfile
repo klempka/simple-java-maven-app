@@ -21,5 +21,26 @@ pipeline {
                          sh './jenkins/scripts/deliver.sh'
                      }
                  }
+         stage('Development only') {
+            when {
+                branch 'develop'
+            }
+            steps {
+                echo 'NO ELO TO DEVELOP'
+            }
+         }
+         stage('Production only') {
+            when {
+                branch 'master'
+            }
+            steps {
+                echo 'NO ELO TO PRODUCTION BEJBE'
+            }
+         }
+         state('Post build') {
+            steps {
+                echo 'POST BUILD XD'
+            }
+         }
     }
 }
