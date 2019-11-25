@@ -33,11 +33,11 @@ pipeline {
             when {
                 branch 'master'
             }
-            steps {
+            steps {cd
                 echo 'NO ELO TO PRODUCTION BEJBE'
             }
          }
-         state('Post build') {
+         stage('Post build') {
             steps {
                 echo 'POST BUILD XD'
             }
